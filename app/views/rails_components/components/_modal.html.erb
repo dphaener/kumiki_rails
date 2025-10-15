@@ -1,0 +1,30 @@
+<%# locals: (modal_data:) -%>
+
+<%= tag.dialog(**modal_data.html_attributes.merge(
+      "data-rails-components--dismiss-animation-class" => "opacity-0",
+      "aria-modal" => "true",
+      "role" => "dialog"
+    )) do %>
+
+  <div class="modal-box">
+    <div class="modal-content">
+      <%= yield %>
+    </div>
+
+    <div class="modal-action">
+      <button type="button"
+              class="btn btn-outline"
+              data-action="rails-components--dismiss#dismiss">
+        Cancel
+      </button>
+    </div>
+  </div>
+
+  <form method="dialog" class="modal-backdrop">
+    <button type="submit"
+            class="absolute inset-0 w-full h-full opacity-0 cursor-default"
+            data-action="rails-components--dismiss#dismiss"
+            aria-label="Close modal">
+    </button>
+  </form>
+<% end %>

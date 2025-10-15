@@ -1,0 +1,21 @@
+/**
+ * Dummy App Main Stylesheet
+ * This file imports Tailwind CSS and any custom styles for the test application
+ */
+
+/* Tailwind CSS Base, Components, and Utilities */
+@import "tailwindcss";
+
+/* Configure Tailwind to scan dummy app files */
+@source "../views";
+@source "../javascript";
+@source "../../../app/components";
+
+/* Custom dummy app styles */
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}

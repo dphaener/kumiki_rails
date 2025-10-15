@@ -1,0 +1,15 @@
+<%# locals: (component_data:) -%>
+
+<% if component_data.has_errors? %>
+  <%= tag.div(**component_data.html_attributes) do %>
+    <% if component_data.error_messages.size == 1 %>
+      <%= component_data.error_messages.first %>
+    <% else %>
+      <%= tag.ul(class: "list-disc list-inside") do %>
+        <% component_data.error_messages.each do |message| %>
+          <%= tag.li(message) %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

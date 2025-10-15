@@ -1,0 +1,25 @@
+<%# locals: (component_data:) -%>
+
+<div class="form-control flex flex-col">
+  <% if component_data.show_label? %>
+    <label class="label" for="<%= component_data.field_id %>">
+      <span class="<%= component_data.label_text_class %>"><%= component_data.label_text %></span>
+    </label>
+  <% end %>
+  <%= tag.select(**component_data.html_attributes) do %>
+    <% if component_data.prompt %>
+      <%= tag.option(component_data.prompt, value: "") %>
+    <% end %>
+    <% component_data.options.each do |option| %>
+      <% if option.is_a?(Array) %>
+        <% text, value = option %>
+        <%= tag.option(text, value: value, selected: (component_data.value.to_s == value.to_s)) %>
+      <% else %>
+        <%= tag.option(option, value: option, selected: (component_data.value.to_s == option.to_s)) %>
+      <% end %>
+    <% end %>
+  <% end %>
+  <% if component_data.object && component_data.attribute %>
+    <%= form_error(object: component_data.object, attribute: component_data.attribute, html_options: { id: component_data.error_id }) %>
+  <% end %>
+</div>

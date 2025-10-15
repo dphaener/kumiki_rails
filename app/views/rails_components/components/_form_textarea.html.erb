@@ -1,0 +1,13 @@
+<%# locals: (component_data:) -%>
+
+<div class="form-control flex flex-col">
+  <% if component_data.show_label? %>
+    <label class="label" for="<%= component_data.field_id %>">
+      <span class="<%= component_data.label_text_class %>"><%= component_data.label_text %></span>
+    </label>
+  <% end %>
+  <%= tag.textarea(component_data.value, **component_data.html_attributes) %>
+  <% if component_data.object && component_data.attribute %>
+    <%= form_error(object: component_data.object, attribute: component_data.attribute, html_options: { id: component_data.error_id }) %>
+  <% end %>
+</div>

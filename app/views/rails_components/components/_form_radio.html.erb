@@ -1,0 +1,11 @@
+<%# locals: (component_data:) -%>
+
+<div class="form-control flex flex-col">
+  <label class="label cursor-pointer justify-start gap-2" for="<%= component_data.field_id %>">
+    <%= tag.input(**component_data.html_attributes) %>
+    <span class="label-text ml-2"><%= component_data.label %></span>
+  </label>
+  <% if component_data.object && component_data.attribute %>
+    <%= form_error(object: component_data.object, attribute: component_data.attribute) %>
+  <% end %>
+</div>

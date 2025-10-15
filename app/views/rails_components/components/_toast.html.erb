@@ -1,0 +1,34 @@
+<%# locals: (toast_data:) -%>
+
+<%= tag.div(**toast_data.html_attributes.merge(
+      "data-controller" => "rails-components--auto-dismiss rails-components--slide",
+      "data-rails-components--auto-dismiss-delay-value" => toast_data.auto_dismiss_delay,
+      "data-rails-components--auto-dismiss-animation-class" => "slide-out-right",
+      "aria-live" => "polite",
+      "aria-atomic" => "true"
+    )) do %>
+
+  <div class="p-1">
+    <div class="flex items-start">
+      <% if toast_data.icon.present? %>
+        <div class="flex-shrink-0 mr-2 mt-0.5">
+          <%= toast_data.icon %>
+        </div>
+      <% end %>
+
+      <div class="flex-1 min-w-0">
+        <% if toast_data.title.present? %>
+          <h4 class="text-sm font-semibold text-gray-900 mb-1">
+            <%= toast_data.title %>
+          </h4>
+        <% end %>
+
+        <% if toast_data.message.present? %>
+          <p class="text-sm text-gray-700">
+            <%= toast_data.message %>
+          </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

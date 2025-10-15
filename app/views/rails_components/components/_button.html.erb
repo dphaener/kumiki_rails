@@ -1,0 +1,19 @@
+<%# locals: (button_data:) -%>
+
+<%= button_tag button_data.html_attributes do %>
+  <% if button_data.loading %>
+    <span class="loading loading-spinner loading-sm mr-2"></span>
+  <% end %>
+  <% if button_data.icon_left.present? && !button_data.loading %>
+    <span class="mr-2"><%= button_data.icon_left %></span>
+  <% end %>
+  <% block_content = block_given? ? capture { yield } : nil %>
+  <% if block_content.present? %>
+    <%= block_content %>
+  <% else %>
+    <%= button_data.text %>
+  <% end %>
+  <% if button_data.icon_right.present? && !button_data.loading %>
+    <span class="ml-2"><%= button_data.icon_right %></span>
+  <% end %>
+<% end %>

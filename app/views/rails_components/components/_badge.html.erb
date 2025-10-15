@@ -1,0 +1,16 @@
+<%# locals: (badge_data:) -%>
+
+<%= content_tag :span, badge_data.html_attributes do %>
+  <% if badge_data.icon_left.present? %>
+    <span class="mr-1"><%= badge_data.icon_left %></span>
+  <% end %>
+  <% block_content = block_given? ? capture { yield } : nil %>
+  <% if block_content.present? %>
+    <%= block_content %>
+  <% else %>
+    <%= badge_data.text %>
+  <% end %>
+  <% if badge_data.icon_right.present? %>
+    <span class="ml-1"><%= badge_data.icon_right %></span>
+  <% end %>
+<% end %>
