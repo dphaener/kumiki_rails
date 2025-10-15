@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rails_components (0.1.0)
+    kumiki_rails (0.1.0)
       importmap-rails (>= 1.0)
       propshaft (>= 0.8.0)
       rails (>= 8.0.0)
@@ -348,9 +348,9 @@ PLATFORMS
 DEPENDENCIES
   capybara
   factory_bot_rails
+  kumiki_rails!
   propshaft
   puma
-  rails_components!
   rspec-rails
   rubocop-rails-omakase
   selenium-webdriver

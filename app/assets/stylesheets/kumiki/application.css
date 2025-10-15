@@ -1,0 +1,108 @@
+/**
+ * Rails Components - Main Stylesheet
+ *
+ * This stylesheet provides Tailwind CSS integration for the Rails Components engine.
+ * It includes base Tailwind utilities and component-specific styles.
+ */
+
+/* Tailwind CSS Base, Components, and Utilities */
+@import "tailwindcss";
+
+/**
+ * Tailwind CSS Source Paths
+ * Configure where Tailwind should scan for class usage
+ */
+@source "../../components/kumiki/components";
+@source "../../views/kumiki";
+@source "../../helpers/kumiki";
+@source "../../javascript/kumiki";
+
+/**
+ * Component-Specific Styles
+ * Custom styles for Rails Components that extend or override Tailwind
+ */
+
+/* Form Components */
+.rc-form-input {
+  @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50;
+}
+
+.rc-form-input-error {
+  @apply border-error focus:border-error focus:ring-error;
+}
+
+.rc-form-label {
+  @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+.rc-form-error {
+  @apply mt-1 text-sm text-error;
+}
+
+.rc-form-hint {
+  @apply mt-1 text-sm text-gray-500;
+}
+
+/* Button Component */
+.rc-button {
+  @apply inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors duration-200;
+}
+
+/* Card Component */
+.rc-card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden;
+}
+
+.rc-card-header {
+  @apply px-6 py-4 border-b border-gray-200;
+}
+
+.rc-card-body {
+  @apply px-6 py-4;
+}
+
+.rc-card-footer {
+  @apply px-6 py-4 border-t border-gray-200 bg-gray-50;
+}
+
+/* Badge Component */
+.rc-badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+/* Animation Keyframes */
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out-right {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.slide-in-right {
+  animation: slide-in-right 0.3s ease-out;
+}
+
+.slide-out-right {
+  animation: slide-out-right 0.3s ease-in;
+}
+
+/**
+ * DaisyUI Integration Placeholder
+ * Uncomment and configure when DaisyUI is added
+ */
+/* @import "daisyui"; */

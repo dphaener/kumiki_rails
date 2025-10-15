@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in rails_components.gemspec.
+# Specify your gem's dependencies in kumiki_rails.gemspec.
 gemspec
 
 gem "puma"
