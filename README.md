@@ -7,7 +7,7 @@
 
 **Modular UI components that fit together seamlessly in your Rails application**
 
-Just like traditional kumiki wooden puzzles, each component is crafted to interlock perfectly - no forcing, no glue, just elegant design. Built with ViewComponent, Tailwind CSS, and DaisyUI.
+Just like traditional kumiki wooden puzzles, each component is crafted to interlock perfectly - no forcing, no glue, just elegant design. Built with Tailwind CSS and DaisyUI on Rails 8+.
 
 [🐛 Report Bug](https://github.com/darinhaener/kumiki_rails/issues) | [💡 Request Feature](https://github.com/darinhaener/kumiki_rails/issues)
 

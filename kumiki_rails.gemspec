@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email       = [ "darin.haener@hey.com" ]
   spec.homepage    = "https://github.com/darinhaener/kumiki_rails"
   spec.summary     = "組木 Kumiki Rails - Modular UI components that fit together perfectly"
-  spec.description = "Kumiki (組木) is a Rails engine providing interlocking UI components inspired by traditional Japanese wooden puzzles. Built with ViewComponent, Tailwind CSS, and DaisyUI, each component is crafted to fit seamlessly into your Rails application. Includes form builders, interactive elements, and follows Rails conventions."
+  spec.description = "Kumiki (組木) is a Rails engine providing interlocking UI components inspired by traditional Japanese wooden puzzles. Built with Tailwind CSS and DaisyUI, each component is crafted to fit seamlessly into your Rails application. Includes form builders, interactive elements, and follows Rails conventions."
   spec.license     = "MIT"
 
   spec.metadata["homepage_uri"] = spec.homepage
