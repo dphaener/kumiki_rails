@@ -79,7 +79,7 @@ jobs:
           tar -tzf rails_components-*.gem | head -20
 
       - name: Upload gem artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: rails_components-gem
           path: rails_components-*.gem
