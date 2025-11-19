@@ -1,0 +1,7 @@
+{
+  "feature_number": "001",
+  "slug": "001-hyperui-component-migration",
+  "friendly_name": "HyperUI Component Migration Analysis",
+  "source_description": "Read docs/migration/phase0/ANALYSIS.md and create a spec based on that.",
+  "created_at": "2025-11-19T02:47:59Z"
+}
