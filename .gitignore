@@ -119,3 +119,6 @@ coverage/
 
 # Pry
 .pry_history
+
+# Documentation
+docs/
